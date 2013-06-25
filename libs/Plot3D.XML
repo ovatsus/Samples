@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plot3D</name>
+    </assembly>
+    <members>
+        <member name="T:Plot3D.ColorHsl">
+            <summary>Represents an AHSL color.</summary>
+        </member>
+        <member name="M:Plot3D.ColorHsl.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Drawing.ColorHsl"/> structure
+            from the specified double values.</summary>
+            <param name="alpha">The alpha component value. Valid values are 0 through 1.</param>
+            <param name="hue">The hue component value. Valid values are 0 through 360.</param>
+            <param name="saturation">The saturation component value. Valid values are 0 through 1.</param>
+            <param name="lightness">The lightness component value. Valid values are 0 through 1.</param>
+        </member>
+        <member name="M:Plot3D.ColorHsl.#ctor(System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Drawing.ColorHsl"/> structure
+            from the specified double values. The alpha value is implicitly 1 (fully opaque).</summary>
+            <param name="hue">The hue component value. Valid values are 0 through 360.</param>
+            <param name="saturation">The saturation component value. Valid values are 0 through 1.</param>
+            <param name="lightness">The lightness component value. Valid values are 0 through 1.</param>
+        </member>
+        <member name="F:Plot3D.ColorHsl.A">
+            <summary>Gets the alpha component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorHsl.H">
+            <summary>Gets the hue component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorHsl.S">
+            <summary>Gets the saturation component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorHsl.L">
+            <summary>Gets the lightness component value.</summary>
+        </member>
+        <member name="M:Plot3D.ColorHsl.ToString">
+            <summary>Converts this <see cref="T:LukeSw.Drawing.ColorHsl" /> structure to a human-readable string.</summary>
+            <returns>String that consists of the AHSL component names and their values.</returns>
+        </member>
+        <member name="T:Plot3D.ColorHsv">
+            <summary>Represents an AHSV color.</summary>
+        </member>
+        <member name="M:Plot3D.ColorHsv.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Drawing.ColorHsv"/> structure
+            from the specified double values.</summary>
+            <param name="alpha">The alpha component value. Valid values are 0 through 1.</param>
+            <param name="hue">The hue component value. Valid values are 0 through 360.</param>
+            <param name="saturation">The saturation component value. Valid values are 0 through 1.</param>
+            <param name="value">The value component value. Valid values are 0 through 1.</param>
+        </member>
+        <member name="M:Plot3D.ColorHsv.#ctor(System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Drawing.ColorHsv"/> structure
+            from the specified double values. The alpha value is implicitly 1 (fully opaque).</summary>
+            <param name="hue">The hue component value. Valid values are 0 through 360.</param>
+            <param name="saturation">The saturation component value. Valid values are 0 through 1.</param>
+            <param name="value">The value component value. Valid values are 0 through 1.</param>
+        </member>
+        <member name="F:Plot3D.ColorHsv.A">
+            <summary>Gets the alpha component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorHsv.H">
+            <summary>Gets the hue component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorHsv.S">
+            <summary>Gets the saturation component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorHsv.V">
+            <summary>Gets the value component value.</summary>
+        </member>
+        <member name="M:Plot3D.ColorHsv.ToString">
+            <summary>Converts this <see cref="T:LukeSw.Drawing.ColorHsv" /> structure to a human-readable string.</summary>
+            <returns>String that consists of the AHSV component names and their values.</returns>
+        </member>
+        <member name="T:Plot3D.ColorRgb">
+            <summary>Represents an ARGB color.</summary>
+        </member>
+        <member name="M:Plot3D.ColorRgb.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Drawing.ColorRgb"/> structure
+            from the specified double values.</summary>
+            <param name="alpha">The alpha component value. Valid values are 0 through 1.</param>
+            <param name="red">The red component value. Valid values are 0 through 1.</param>
+            <param name="green">The green component value. Valid values are 0 through 1.</param>
+            <param name="blue">The blue component value. Valid values are 0 through 1.</param>
+        </member>
+        <member name="M:Plot3D.ColorRgb.#ctor(System.Double,System.Double,System.Double)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Drawing.ColorRgb"/> structure
+            from the specified double values. The alpha value is implicitly 1 (fully opaque).</summary>
+            <param name="red">The red component value. Valid values are 0 through 1.</param>
+            <param name="green">The green component value. Valid values are 0 through 1.</param>
+            <param name="blue">The blue component value. Valid values are 0 through 1.</param>
+        </member>
+        <member name="F:Plot3D.ColorRgb.A">
+            <summary>Gets the alpha component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorRgb.R">
+            <summary>Gets the red component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorRgb.G">
+            <summary>Gets the green component value.</summary>
+        </member>
+        <member name="F:Plot3D.ColorRgb.B">
+            <summary>Gets the blue component value.</summary>
+        </member>
+        <member name="M:Plot3D.ColorRgb.ToString">
+            <summary>Converts this <see cref="T:LukeSw.Drawing.ColorRgb" /> structure to a human-readable string.</summary>
+            <returns>String that consists of the ARGB component names and their values.</returns>
+        </member>
+        <member name="M:Plot3D.ColorRgb.ToColor">
+            <summary>Returns a <see cref="T:System.Drawing.Color" /> reprezentation of current instance.</summary>
+            <returns>A <see cref="T:System.Drawing.Color" /> reprezentation of current instance</returns>
+        </member>
+        <member name="M:Plot3D.ColorRgb.ToColorHsv">
+            <summary>Returns a <see cref="T:LukeSw.Drawing.ColorHsv" /> reprezentation of current instance.</summary>
+            <returns>A <see cref="T:LukeSw.Drawing.ColorHsv" /> reprezentation of current instance</returns>
+        </member>
+        <member name="M:Plot3D.ColorRgb.ToColorHsl">
+            <summary>Returns a <see cref="T:LukeSw.Drawing.ColorHsl" /> reprezentation of current instance.</summary>
+            <returns>A <see cref="T:LukeSw.Drawing.ColorHsl" /> reprezentation of current instance</returns>
+        </member>
+        <member name="M:Plot3D.Plot3D.#ctor(System.Func{System.Double,System.Double,System.Double},System.Double,System.Double,System.Double,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+            <param name="obsX">Observator's X position</param>
+            <param name="obsY">Observator's Y position</param>
+            <param name="obsZ">Observator's Z position</param>
+            <param name="xs0">X coordinate of screen</param>
+            <param name="ys0">Y coordinate of screen</param>
+            <param name="screenDistance">The screen distance.</param>
+            <param name="screenWidthPhys">Width of the screen in meters.</param>
+            <param name="screenHeightPhys">Height of the screen in meters.</param>
+        </member>
+        <member name="T:Plot3D.FunctionCompiler">
+            <summary>Compiles functions as runtime. This class cannot be inherited.</summary>
+        </member>
+        <member name="M:Plot3D.FunctionCompiler.Compile(System.Int32,System.String)">
+            <summary>Compiles function at runtime.</summary>
+            <param name="parametersCount">Number of input parameters.</param>
+            <param name="functionBody">Function body.</param>
+            <returns>Compiled function.</returns>
+            <exception cref="!:LukeSw.Runtime.FunctionNotCompiledException">Thrown when function was not compiled because of some errors in functions body.</exception>
+            <example>This sample shows how to call the Compile method.
+            <code>
+            CompiledFunction cf = FunctionCompiler.Compile(3, "y = x1 + x2 + x3;");
+            double y = cf(2, 4, 7);
+            </code>
+            </example>
+        </member>
+        <member name="T:Plot3D.FunctionNotCompiledException">
+            <summary>The exception is thrown when function was not compiled.</summary>
+        </member>
+        <member name="M:Plot3D.FunctionNotCompiledException.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Runtime.FunctionNotCompiledException" /> class.</summary>
+        </member>
+        <member name="M:Plot3D.FunctionNotCompiledException.#ctor(System.String)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Runtime.FunctionNotCompiledException" /> class with a specified error message.</summary>
+            <param name="message">A message that describes the error.</param>
+        </member>
+        <member name="M:Plot3D.FunctionNotCompiledException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Runtime.FunctionNotCompiledException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">The exception that is the cause of the current exception. If the innerException parameter is not a null reference, the current exception is raised in a catch block that handles the inner exception.</param>
+        </member>
+        <member name="M:Plot3D.FunctionNotCompiledException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Initializes a new instance of the <see cref="T:LukeSw.Runtime.FunctionNotCompiledException" /> class with serialized data.</summary>
+            <param name="context">The contextual information about the source or destination.</param>
+            <param name="info">The object that holds the serialized object data.</param>
+        </member>
+        <member name="T:Plot3D.CompiledFunction">
+            <summary>Represents a function that was compiled at runtime.</summary>
+            <param name="x">Function input parameter.</param>
+            <returns>Result value of function.</returns>
+        </member>
+        <member name="T:Plot3D.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Plot3D.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Plot3D.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Plot3D.Properties.Resources.ColorRgb_CheckFloatException">
+            <summary>
+              Looks up a localized string similar to Name = {0}, value = {1}, min = {2}, max = {3}.
+            </summary>
+        </member>
+        <member name="P:Plot3D.Properties.Resources.FunctionCompiler_EvalClass">
+             <summary>
+               Looks up a localized string similar to using System;
+            using {1};
+            public class Eval
+            {{
+            	public static double acot(double x)
+            	{{
+            		return System.Math.PI/2 - System.Math.Atan(x);
+            	}}
+            	public static double abs(double x)
+            	{{
+            		return System.Math.Abs(x);
+            	}}
+            	public static double __eval(params double[] __X)
+            	{{
+            		{0}
+            		return y;
+            	}}
+            	public static CompiledFunction __get()
+            	{{
+            		return __eval;
+            	}}
+            }}.
+             </summary>
+        </member>
+        <member name="P:Plot3D.Properties.Resources.FunctionCompiler_SemicolonException">
+            <summary>
+              Looks up a localized string similar to Function string cannot contain semicolon.
+            </summary>
+        </member>
+        <member name="M:Plot3D.Surface3DRenderer.#ctor(System.Double,System.Double,System.Double,System.Int32,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plot3D.Surface3DRenderer"/> class. Calculates transformations coeficients.
+            </summary>
+            <param name="obsX">Observator's X position</param>
+            <param name="obsY">Observator's Y position</param>
+            <param name="obsZ">Observator's Z position</param>
+            <param name="xs0">X coordinate of screen</param>
+            <param name="ys0">Y coordinate of screen</param>
+            <param name="screenWidth">Drawing area width in pixels.</param>
+            <param name="screenHeight">Drawing area height in pixels.</param>
+            <param name="screenDistance">The screen distance.</param>
+            <param name="screenWidthPhys">Width of the screen in meters.</param>
+            <param name="screenHeightPhys">Height of the screen in meters.</param>
+        </member>
+        <member name="M:Plot3D.Surface3DRenderer.Project(System.Double,System.Double,System.Double)">
+            <summary>
+            Performs projection. Calculates screen coordinates for 3D point.
+            </summary>
+            <param name="x">Point's x coordinate.</param>
+            <param name="y">Point's y coordinate.</param>
+            <param name="z">Point's z coordinate.</param>
+            <returns>Point in 2D space of the screen.</returns>
+        </member>
+        <member name="P:Plot3D.Surface3DRenderer.Density">
+            <summary>
+            Surface spanning net density
+            </summary>
+        </member>
+        <member name="P:Plot3D.Surface3DRenderer.PenColor">
+            <summary>
+            Quadrilateral pen color
+            </summary>
+        </member>
+    </members>
+</doc>

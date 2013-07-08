@@ -27,22 +27,18 @@ let equilibriumGdp p =
 
 let plotGdp p initialMachines years =
     Seq.unfold (fun machines -> Some(gdp p machines, nextYearMachines p machines)) initialMachines
-    |> Seq.zip (Seq.initInfinite id)
     |> Seq.take years
-    |> Seq.toArray
     |> Chart.Line
 
 let plotGrowth p initialMachines years =
     initialMachines
     |> Seq.unfold (fun machines -> Some(growth p machines, nextYearMachines p machines))
     |> Seq.map (fun growth -> growth * 100.0)
-    |> Seq.zip (Seq.initInfinite id)
     |> Seq.take years
-    |> Seq.toArray
     |> Chart.Column
 
 let p = { labour = 100.0; investmentRate = 0.2; depreciationRate = 0.1 }
 let machines = 3600.0
 
-plotGdp p machines 50 |> ChartWindow.showWithTitle "China GDP"
-plotGrowth p machines 50 |> ChartWindow.showWithTitle "China Growth"
+plotGdp p machines 50 
+plotGrowth p machines 50

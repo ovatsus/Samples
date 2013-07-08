@@ -15,7 +15,7 @@
 #r "packages/MathNet.Numerics.2.5.0/lib/net40/MathNet.Numerics.dll"
 #r "packages/MathNet.Numerics.FSharp.2.5.0/lib/net40/MathNet.Numerics.FSharp.dll"
 #r "packages/MathNet.Numerics.2.5.0/lib/net40/MathNet.Numerics.IO.dll"
-#r "packages/FSharp.Data.1.1.5/lib/net40/FSharp.Data.dll"
+#r "packages/FSharp.Data.1.1.8/lib/net40/FSharp.Data.dll"
 #r "packages/FSharp.Charting.0.82/lib/net40/FSharp.Charting.dll"
 #r "libs/DynamicDataDisplay.dll"
 #r "libs/Plot3D.dll"

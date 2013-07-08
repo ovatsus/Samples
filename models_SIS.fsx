@@ -34,11 +34,9 @@ let minimumVaccinationToNotSpread r0 =
 let plot p periods initialInfectedPeople =
     (float initialInfectedPeople)
     |> Seq.unfold (fun infectedPeople -> Some(infectedPeople, nextPeriodInfectedPeople p infectedPeople)) 
-    |> Seq.zip (Seq.initInfinite id)
     |> Seq.take periods
-    |> Seq.toArray
     |> Chart.Line 
 
 let p = { contactRate = 0.3; trasmissionRate = 0.3; populationSize = 100.0; cureRate = 0.1 }
 
-plot p 1000 1 |> ChartWindow.show
+plot p 1000 1

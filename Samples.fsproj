@@ -75,11 +75,11 @@
       <HintPath>packages\FSharp.Charting.0.82\lib\net40\FSharp.Charting.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.Data">
-      <HintPath>packages\FSharp.Data.1.1.5\lib\net40\FSharp.Data.dll</HintPath>
+      <HintPath>packages\FSharp.Data.1.1.8\lib\net40\FSharp.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharp.Data.DesignTime">
-      <HintPath>packages\FSharp.Data.1.1.5\lib\net40\FSharp.Data.DesignTime.dll</HintPath>
+      <HintPath>packages\FSharp.Data.1.1.8\lib\net40\FSharp.Data.DesignTime.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FsUnit.NUnit">

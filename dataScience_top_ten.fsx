@@ -4,7 +4,7 @@ open System
 open System.IO
 open System.Collections.Generic
 open FSharp.Data
-open FSharp.Data.Json.Extensions
+open FSharp.Data.JsonExtensions
 
 System.Environment.CurrentDirectory <- __SOURCE_DIRECTORY__
 
@@ -15,7 +15,7 @@ let asOption = function
 let hashTags = Dictionary<_,_>()
 
 for line in File.ReadLines "data/output.json" do
-    let twitter = JsonProvider<"data/sample.json", SampleList=true>.Parse line    
+    let twitter = JsonProvider<"data/sample.json", SampleIsList=true>.Parse line    
     match twitter.Entities with
     | None -> ()    
     | Some entities ->

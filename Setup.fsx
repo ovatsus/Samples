@@ -12,9 +12,8 @@
 #r "WindowsBase"
 #r "WindowsFormsIntegration"
 
-#r "packages/MathNet.Numerics.2.5.0/lib/net40/MathNet.Numerics.dll"
-#r "packages/MathNet.Numerics.FSharp.2.5.0/lib/net40/MathNet.Numerics.FSharp.dll"
-#r "packages/MathNet.Numerics.2.5.0/lib/net40/MathNet.Numerics.IO.dll"
+#r "packages/MathNet.Numerics.3.0.0-alpha9/lib/net40/MathNet.Numerics.dll"
+#r "packages/MathNet.Numerics.FSharp.3.0.0-alpha9/lib/net40/MathNet.Numerics.FSharp.dll"
 #r "packages/FSharp.Data.2.0.5/lib/net40/FSharp.Data.dll"
 #r "packages/FSharp.Charting.0.90.6/lib/net40/FSharp.Charting.dll"
 #r "libs/DynamicDataDisplay.dll"
@@ -27,9 +26,9 @@
 #load "Iteration.fs"
 #load "MathNetExtensions.fs"
 #load "LinearRegressionWithOneVariable.fs"
-#load "LinearRegression.fs"
+//#load "LinearRegression.fs"
 #load "LogisticRegression.fs"
-#load "LinearRegressionWithRegularization.fs"
+//#load "LinearRegressionWithRegularization.fs"
 #load "LogisticRegressionWithRegularization.fs"
 
 open FSharp.Charting

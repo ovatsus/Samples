@@ -1,8 +1,7 @@
 ﻿module LinearRegression
 
 open System.IO
-open MathNet.Numerics.LinearAlgebra.Double
-open MathNet.Numerics.LinearAlgebra.Generic
+open MathNet.Numerics.LinearAlgebra
 open MathNet.Numerics.Statistics
 
 let h (θ: Vector<float>) x = 
@@ -35,7 +34,7 @@ let innerGradientDescent iterationFunction α maxIterations (X, y) =
     let iteration θ =
         θ - (α / m) * X.Transpose() * (X * θ - y)
     
-    DenseVector.create (Matrix.columnCount X) 0. :> Vector<float> |> iterationFunction iteration maxIterations
+    DenseVector.create (Matrix.columnCount X) 0. |> iterationFunction iteration maxIterations
 
 let gradientDescent α = innerGradientDescent Iteration.iterateUntilConvergence α
 let gradientDescentWithIntermediateResults α = innerGradientDescent Iteration.iterateUntilConvergenceWithIntermediateResults α
@@ -55,13 +54,13 @@ let plotGradientDescentIterations α maxIterations (X, y) =
 let featureNormalize (X: Matrix<float>) =
     
     let μ = 
-        X.ColumnEnumerator() 
-        |> Seq.map (fun (j, col) -> col.Mean()) 
+        X.EnumerateColumns()
+        |> Seq.map (fun col -> col.Mean()) 
         |> DenseVector.ofSeq
     
     let σ = 
-        X.ColumnEnumerator() 
-        |> Seq.map (fun (j, col) -> col.StandardDeviation()) 
+        X.EnumerateColumns() 
+        |> Seq.map (fun col -> col.StandardDeviation()) 
         |> DenseVector.ofSeq    
     
     let alternative1() =

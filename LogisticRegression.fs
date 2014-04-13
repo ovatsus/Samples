@@ -1,7 +1,6 @@
 ﻿module LogisticRegression
 
-open MathNet.Numerics.LinearAlgebra.Double
-open MathNet.Numerics.LinearAlgebra.Generic
+open MathNet.Numerics.LinearAlgebra
 
 let sigmoid x =
     1. / (1. + exp -x)
@@ -50,7 +49,7 @@ let innerGradientDescent iterationFunction α maxIterations (X, y) =
         let h = X * θ |> Vector.map sigmoid
         θ - (α / m) * X.Transpose() * (h - y)
     
-    DenseVector.create (Matrix.columnCount X) 0. :> Vector<float> |> iterationFunction iteration2 maxIterations
+    DenseVector.create (Matrix.columnCount X) 0. |> iterationFunction iteration2 maxIterations
 
 let gradientDescent α = innerGradientDescent Iteration.iterateUntilConvergence α
 let gradientDescentWithIntermediateResults α = innerGradientDescent Iteration.iterateUntilConvergenceWithIntermediateResults α

@@ -1,7 +1,6 @@
 ﻿module LinearRegressionWithRegularization
 
-open MathNet.Numerics.LinearAlgebra.Double
-open MathNet.Numerics.LinearAlgebra.Generic
+open MathNet.Numerics.LinearAlgebra
 
 let J (X, y) λ (θ: Vector<float>) =
     assert (Matrix.rowCount X = Vector.length y)
@@ -29,7 +28,7 @@ let innerGradientDescent iterationFunction α maxIterations (λ: float) (X, y) =
         let errors = X.Transpose() * (X * θ - y)
         θ - (α / m) * errors - λ / m * θforReg
 
-    DenseVector.create (Matrix.columnCount X) 0. :> Vector<float> |> iterationFunction iteration maxIterations
+    DenseVector.create (Matrix.columnCount X) 0. |> iterationFunction iteration maxIterations
 
 let gradientDescent α = innerGradientDescent Iteration.iterateUntilConvergence α
 let gradientDescentWithIntermediateResults α = innerGradientDescent Iteration.iterateUntilConvergenceWithIntermediateResults α

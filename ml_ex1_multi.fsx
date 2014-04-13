@@ -1,6 +1,6 @@
 ﻿#load "Setup.fsx"
 
-open MathNet.Numerics.LinearAlgebra.Double
+open MathNet.Numerics.LinearAlgebra
 open FSharp.Charting
 
 // ================ Part 1: Feature Normalization ================

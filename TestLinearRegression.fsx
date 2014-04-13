@@ -1,7 +1,6 @@
 ﻿#load "Setup.fsx"
 
-open MathNet.Numerics.LinearAlgebra.Double
-open MathNet.Numerics.LinearAlgebra.Generic
+open MathNet.Numerics.LinearAlgebra
 
 let prepare data = 
     data |> List.map (fun (x, _) -> List.map (fun x -> float x) x) |> matrix,

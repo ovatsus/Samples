@@ -68,8 +68,8 @@ let featureNormalize (X: Matrix<float>) =
         (X, μ, σ)
 
     let alternative2() =
-        let μExpanded = DenseMatrix.initRow X.RowCount X.ColumnCount (fun _ -> μ)
-        let σDiag = DenseMatrix.diag σ
+        let μExpanded = DenseMatrix.initRows X.RowCount (fun _ -> μ)
+        let σDiag = DenseMatrix.ofDiag σ
         let X = (X - μExpanded) * σDiag.Inverse()
         (X, μ, σ)
 
@@ -87,7 +87,7 @@ let loadData file =
     let matrix =
         File.ReadLines(__SOURCE_DIRECTORY__ + "/data/" + file) 
         |> Seq.map (fun line -> line.Split(',') |> Array.map float) 
-        |> DenseMatrix.ofSeq
+        |> DenseMatrix.ofRowSeq
     let m = matrix.RowCount
     let n = matrix.ColumnCount
     (matrix.[0..,..n-2], matrix.Column(n-1))

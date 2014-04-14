@@ -8,7 +8,7 @@ open FSharp.Charting
 printfn "Running warmUpExercise ..."
 printfn "5x5 Identity Matrix:"
     
-DenseMatrix.identity 5 |> printfn "%O" 
+DenseMatrix.identity<float> 5 |> printfn "%O"
 
 // ======================= Part 2: Plotting =======================
 

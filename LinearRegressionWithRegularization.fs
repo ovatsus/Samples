@@ -39,4 +39,4 @@ let normalEquation λ (X, y) =
     let X = X.InsertColumn(0, DenseVector.create (Matrix.rowCount X) 1.)   
     let X' = X.Transpose()
     
-    (X' * X + λ * DenseMatrix.Identity(X.ColumnCount)).Inverse() * X' * y
+    Matrix.inverse (X' * X + λ * DenseMatrix.identity<float> (X.ColumnCount)) * X' * y

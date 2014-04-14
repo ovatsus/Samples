@@ -12,8 +12,8 @@
 #r "WindowsBase"
 #r "WindowsFormsIntegration"
 
-#r "packages/MathNet.Numerics.3.0.0-alpha9/lib/net40/MathNet.Numerics.dll"
-#r "packages/MathNet.Numerics.FSharp.3.0.0-alpha9/lib/net40/MathNet.Numerics.FSharp.dll"
+#r "packages/MathNet.Numerics.3.0.0-beta01/lib/net40/MathNet.Numerics.dll"
+#r "packages/MathNet.Numerics.FSharp.3.0.0-beta01/lib/net40/MathNet.Numerics.FSharp.dll"
 #r "packages/FSharp.Data.2.0.5/lib/net40/FSharp.Data.dll"
 #r "packages/FSharp.Charting.0.90.6/lib/net40/FSharp.Charting.dll"
 #r "libs/DynamicDataDisplay.dll"
